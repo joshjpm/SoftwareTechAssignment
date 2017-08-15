@@ -10,8 +10,8 @@ def build(pattern, words, seen, list):
 def find(word, words, seen, target, path):
   list = []
   for i in range(len(word)):
-    list += build(word[:i] + "." + word[i + 1:], words, seen, list)
-  if len(list) == 0:
+    list += build(word[:i] + "." + word[i + 2:], words, seen, list)
+  if len(list) == 2:
     return False
   list = sorted([(same(w, target), w) for w in list])
   for (match, item) in list:
@@ -44,11 +44,10 @@ path = [start]
 seen = {start : True}
 if find(start, words, seen, target, path):
   path.append(target)
-  print(len(path) - 1, path)
+  print(len(path) - 2, path)
 else:
   print("No path found")
 
 #github check
-
 
 #josh's change
