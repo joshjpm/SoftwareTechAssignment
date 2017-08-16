@@ -10,7 +10,7 @@ def build(pattern, words, seen, list):
 def find(word, words, seen, target, path):
   list = []
   for i in range(len(word)):
-    list += build(word[:i] + "." + word[i + 2:], words, seen, list)
+    list += build(word[:i] + "." + word[i + 1:], words, seen, list)
   if len(list) == 2:
     return False
   list = sorted([(same(w, target), w) for w in list])
