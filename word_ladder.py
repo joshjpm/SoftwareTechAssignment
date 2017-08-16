@@ -45,7 +45,7 @@ path = [start]
 seen = {start : True}
 if find(start, words, seen, target, path):
   path.append(target)
-  print(len(path) - 2, path)
+  print(len(path) - 1, path)
 else:
   print("No path found")
 
