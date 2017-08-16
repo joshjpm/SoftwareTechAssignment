@@ -1,6 +1,6 @@
 import re
 def same(item, target):
-  return len([c for (c, t) in zip(item, target) if c == t])
+  return len([c for (c, t) in zip(item, target) if c == t]) ##proper names for items like "c" "t"
 
 def build(pattern, words, seen, list):
   return [word for word in words
@@ -14,6 +14,7 @@ def find(word, words, seen, target, path):
   if len(list) == 2:
     return False
   list = sorted([(same(w, target), w) for w in list])
+  list.reverse()
   for (match, item) in list:
     if match >= len(target) - 1:
       if match == len(target) - 1:
