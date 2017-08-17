@@ -28,8 +28,21 @@ def find(word, words, seen, target, path):
     path.pop()
 
 fname = input("Enter dictionary name: ").lower()
+newFile = "newDic.txt"
+exclude = input("enter any words you wish to exclude: ")
 file = open(fname)
+#newFile = open(newFile)
 lines = file.readlines()
+file.close()
+file = open(newFile, 'w')
+for line in lines:
+    if line != exclude +"\n":
+       file.write(line)
+
+file = open(newFile)
+lines = file.readlines()
+
+
 while True:
   start = input("Enter start word:").lower()
   while not start.isalpha():
