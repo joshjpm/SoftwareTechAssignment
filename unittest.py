@@ -16,7 +16,6 @@ class sameTest4(unittest.TestCase):
     def test_same4(self):
         self.assertEqual(same('frank', 'gold'), 0)
 
-
 class findTest1(unittest.TestCase):
     def test_find1(self):
         self.assertEqual(find('load', words, seen, 'gold', ['lead', 'load']), True)
