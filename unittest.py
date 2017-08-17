@@ -19,7 +19,7 @@ class findTest1(unittest.TestCase):
         self.assertEqual(find('load', words, seen, 'gold', ['lead', 'load']), True)
 class findTest2(unittest.TestCase):
     def test_find2(self):
-        self.assertEqual(find('photo', words, seen, 'hosue', ['photo']), False)
+        self.assertIsNone(find('photo', words, seen, 'hosue', ['photo']))
 class findTest3(unittest.TestCase):
     def test_find3(self):
         self.assertEqual(find('gold', words, seen, 'gold', ['goad', 'load']), True)
