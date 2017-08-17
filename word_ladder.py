@@ -27,17 +27,17 @@ def find(word, words, seen, target, path):
       return True
     path.pop()
 
-fname = input("Enter dictionary name: ")
+fname = input("Enter dictionary name: ").lower()
 file = open(fname)
 lines = file.readlines()
 while True:
-  start = input("Enter start word:")
+  start = input("Enter start word:").lower()
   words = []
   for line in lines:
     word = line.rstrip()
     if len(word) == len(start):
       words.append(word)
-  target = input("Enter target word:")
+  target = input("Enter target word:").lower()
   break
 
 count = 0
