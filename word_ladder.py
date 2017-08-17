@@ -33,7 +33,7 @@ lines = file.readlines()
 while True:
   start = input("Enter start word:").lower()
   while not start.isalpha():
-      start = input("Letters Only, Enter start word:").lower()
+      start = input("Input error, please enter letters only:").lower()
   words = []
   for line in lines:
     word = line.rstrip()
@@ -41,8 +41,10 @@ while True:
       words.append(word)
   target = input("Enter target word:").lower()
   while not target.isalpha():
-      target = input("Letters Only, Enter target word:").lower()
+      target = input("Input error, please enter letters only:").lower()
   break
+
+
 
 count = 0
 path = [start]
