@@ -12,6 +12,9 @@ class sameTest2(unittest.TestCase):
 class sameTest3(unittest.TestCase):
     def test_same3(self):
         self.assertEqual(same('gold', 'gold'), 4)
+class sameTest4(unittest.TestCase):
+    def test_same4(self):
+        self.assertEqual(same('frank', 'gold'), 0)
 
 
 class findTest1(unittest.TestCase):
