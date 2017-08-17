@@ -32,12 +32,16 @@ file = open(fname)
 lines = file.readlines()
 while True:
   start = input("Enter start word:").lower()
+  while not start.isalpha():
+      start = input("Letters Only, Enter start word:").lower()
   words = []
   for line in lines:
     word = line.rstrip()
     if len(word) == len(start):
       words.append(word)
   target = input("Enter target word:").lower()
+  while not target.isalpha():
+      target = input("Letters Only, Enter target word:").lower()
   break
 
 count = 0
