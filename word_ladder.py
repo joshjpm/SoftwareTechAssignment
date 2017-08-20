@@ -92,5 +92,3 @@ if find(start, words, seen, target, path):
 # If no path is found then it is printed to the user.
 else:
   print("No path found")
-
-#github check
