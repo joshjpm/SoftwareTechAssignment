@@ -22,9 +22,11 @@ def find(word, words, seen, target, path):
     return False
   list = sorted([(same(w, target), w) for w in list])
   list.reverse()
+# If it is not the same as well as there is one word
   for (match, item) in list:
     if match >= len(target) - 1:
       if match == len(target) - 1:
+# Add this word to the path
         path.append(item)
       return True
     seen[item] = True
@@ -38,7 +40,7 @@ def find(word, words, seen, target, path):
 # Then prompts the user if they would like to exclude any words.
 fname = input("Enter dictionary name: ").lower()
 newFile = "newDic.txt"
-exclude = input("Enter any words you wish to exclude: ")
+exclude = input("Enter any words you wish to exclude from the path: ")
 file = open(fname)
 
 #newFile = open(newFile)
